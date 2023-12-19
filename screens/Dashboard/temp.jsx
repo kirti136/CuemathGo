@@ -2,36 +2,17 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import localStorage from "../../utils/localStorage";
-import CarouselLottie from "./CarouselLottie";
 
 const DashboardScreen = () => {
   const navigation = useNavigation();
-  const user = localStorage.getUser();
-  const userEmail = "user@example.com";
-  // const userEmail = user ? user.email : "user@example.com";
 
   const handleLogout = async () => {
     await localStorage.removeUser();
     navigation.navigate("Home");
   };
 
-  const carouselData = [
-    {
-      lottieSource: require("../../assets/animations/lottie1.json"),
-      isLooping: true,
-      text: "Tapping this lottie launches a in-app webview with user details",
-    },
-    {
-      lottieSource: require("../../assets/animations/lottie2.json"),
-      isLooping: true,
-      text: "Tapping this plays 33% of the frames at a time of this lottie.",
-    },
-    {
-      lottieSource: require("../../assets/animations/lottie3.json"),
-      isLooping: true,
-      text: "Tapping this lottie opens the bottom sheet.",
-    },
-  ];
+  const user = localStorage.getUser();
+  const userEmail = "user@example.com" || user.email;
 
   return (
     <View style={styles.container}>
@@ -51,8 +32,12 @@ const DashboardScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* CarouselLottie component */}
-      <CarouselLottie data={carouselData} />
+
+      {/* Lottie Carousel Container */}
+      <View style={styles.carousel}>
+
+
+      </View>
     </View>
   );
 };
@@ -60,41 +45,54 @@ const DashboardScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "black",
-    width: "100%",
+    borderWidth:1,
+    borderColor:"pink",
+    width:"100%"
+    // paddingHorizontal: 20,
   },
   header: {
     flexDirection: "row",
-    // borderWidth: 1,
-    // borderColor: "pink",
-    width: "90%",
-    justifyContent: "space-between",
-    marginTop: 10,
+    borderWidth:1,
+    borderColor:"pink",
+    width:"90%",
+    justifyContent:"space-between",
+    marginTop:"0%"
   },
   userInfo: {
     flexDirection: "row",
     alignItems: "center",
+    // marginBottom: 30,
   },
   profileImage: {
-    width: 40,
-    height: 40,
-    marginRight: 5,
+    width: 30,
+    height: 30,
+    marginRight: 3,
+    // Add additional styles for your profile image as needed
   },
   emailText: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: "bold",
-    marginLeft: 5,
-    color: "white",
+    marginLeft: 3,
+    color:"white"
   },
   logoutButton: {
-    justifyContent: "center",
+    justifyContent:"center"
   },
   logoutButtonText: {
-    fontSize: 17,
+    fontSize: 15,
+
     color: "gray",
+    // fontWeight: "bold",
   },
+  carousel:{
+    borderWidth:1,
+    borderColor:"pink",
+    width:"90%",
+    height:100
+  }
 });
 
 export default DashboardScreen;
