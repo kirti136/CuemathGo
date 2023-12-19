@@ -15,7 +15,6 @@
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/stack": "^6.3.20",
-    "deprecated-react-native-prop-types": "^2.2.0",
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
     "lottie-react-native": "5.1.6",

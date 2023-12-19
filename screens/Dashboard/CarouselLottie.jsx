@@ -1,30 +1,46 @@
 import React, { useRef, useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
-import PropTypes from "prop-types";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import LottieView from "lottie-react-native";
 
-const CarouselLottie = ({ data }) => {
+const CarouselLottie = () => {
+  const data = [
+    {
+      lottieSource: require("../../assets/animations/lottie1.json"),
+      isLooping: true,
+      text: "Tapping this lottie launches a in-app webview with user details",
+    },
+    {
+      lottieSource: require("../../assets/animations/lottie2.json"),
+      isLooping: true,
+      text: "Tapping this plays 33% of the frames at a time of this lottie.",
+    },
+    {
+      lottieSource: require("../../assets/animations/lottie3.json"),
+      isLooping: true,
+      text: "Tapping this lottie opens the bottom sheet.",
+    },
+  ];
   const carouselRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
   const renderCarouselItem = ({ item, index }) => {
     return (
-      <View style={styles.carouselItem}>
+      <View style={carouselStyles.carouselItem}>
         <LottieView
           source={item.lottieSource}
           autoPlay={item.isLooping}
           loop={item.isLooping}
-          style={styles.lottieAnimation}
+          style={carouselStyles.lottieAnimation}
         />
       </View>
     );
   };
 
   return (
-    <View style={styles.container}>
+    <View style={carouselStyles.container}>
       {/* Carousel Container */}
-      <View style={styles.carouselContainer}>
+      <View style={carouselStyles.carouselContainer}>
         {/* Animation */}
         <Carousel
           ref={carouselRef}
@@ -35,12 +51,12 @@ const CarouselLottie = ({ data }) => {
           onSnapToItem={(index) => setActiveSlide(index)}
         />
         {/* Pgination Dots */}
-        <View style={styles.paginationContainer}>
+        <View style={carouselStyles.paginationContainer}>
           <Pagination
             dotsLength={data.length}
             activeDotIndex={activeSlide}
-            dotStyle={styles.dotStyle}
-            inactiveDotStyle={styles.inactiveDotStyle}
+            dotStyle={carouselStyles.dotStyle}
+            inactiveDotStyle={carouselStyles.inactiveDotStyle}
             inactiveDotOpacity={0.8}
             inactiveDotScale={0.9}
           />
@@ -48,14 +64,16 @@ const CarouselLottie = ({ data }) => {
       </View>
 
       {/* Text */}
-      <View style={styles.textContainer}>
-        <Text style={styles.paginationText}>{data[activeSlide].text}</Text>
+      <View style={carouselStyles.textContainer}>
+        <Text style={carouselStyles.paginationText}>
+          {data[activeSlide].text}
+        </Text>
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+const carouselStyles = StyleSheet.create({
   container: {
     flex: 1,
     width: "90%",
@@ -103,15 +121,5 @@ const styles = StyleSheet.create({
     lineHeight: 28,
   },
 });
-
-CarouselLottie.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      lottieSource: PropTypes.any.isRequired,
-      isLooping: PropTypes.bool.isRequired,
-      text: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
 
 export default CarouselLottie;

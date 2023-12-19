@@ -26,24 +26,6 @@ const DashboardScreen = () => {
     navigation.navigate("Home");
   };
 
-  const carouselData = [
-    {
-      lottieSource: require("../../assets/animations/lottie1.json"),
-      isLooping: true,
-      text: "Tapping this lottie launches a in-app webview with user details",
-    },
-    {
-      lottieSource: require("../../assets/animations/lottie2.json"),
-      isLooping: true,
-      text: "Tapping this plays 33% of the frames at a time of this lottie.",
-    },
-    {
-      lottieSource: require("../../assets/animations/lottie3.json"),
-      isLooping: true,
-      text: "Tapping this lottie opens the bottom sheet.",
-    },
-  ];
-
   return (
     <View style={styles.container}>
       {/* Header Container */}
@@ -63,7 +45,7 @@ const DashboardScreen = () => {
       </View>
 
       {/* CarouselLottie component */}
-      <CarouselLottie data={carouselData} />
+      <CarouselLottie />
     </View>
   );
 };
