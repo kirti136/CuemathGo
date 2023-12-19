@@ -67,6 +67,9 @@ const CarouselLottie = () => {
       <View style={styles.textContainer}>
         <Text style={styles.paginationText}>{data[activeSlide].text}</Text>
       </View>
+
+      {/* Bottom Sheet */}
+
     </View>
   );
 };
