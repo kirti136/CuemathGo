@@ -7,12 +7,17 @@ import CarouselLottie from "./CarouselLottie";
 const DashboardScreen = () => {
   const navigation = useNavigation();
   const [userEmail, setUserEmail] = useState("user@example.com");
+  const [firstName, setFirstName] = useState("");
+  const [age, setAge] = useState(0);
 
+  // Get User Email ID
   useEffect(() => {
     const getEmail = async () => {
       try {
         const user = await localStorage.getUser();
         setUserEmail(user ? user.email : "user@example.com");
+        setFirstName(user ? user.firstName : "User");
+        setAge(user ? user.age : 0);
       } catch (error) {
         console.error("Error fetching user email:", error);
       }
@@ -21,6 +26,7 @@ const DashboardScreen = () => {
     getEmail();
   }, []);
 
+  // Handle Logout
   const handleLogout = async () => {
     await localStorage.removeUser();
     navigation.navigate("Home");
@@ -28,7 +34,7 @@ const DashboardScreen = () => {
 
   return (
     <View style={styles.container}>
-      {/* Header Container */}
+      {/* Header Container (profile,email,logout button) */}
       <View style={styles.header}>
         {/* Email Profile */}
         <View style={styles.userInfo}>
@@ -44,8 +50,8 @@ const DashboardScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* CarouselLottie component */}
-      <CarouselLottie />
+      {/* Carousel Animation */}
+      <CarouselLottie userData={{ firstName, age }} />
     </View>
   );
 };

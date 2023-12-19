@@ -15,7 +15,9 @@
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/stack": "^6.3.20",
+    "deprecated-react-native-prop-types": "^5.0.0",
     "expo": "~49.0.15",
+    "expo-router": "^2.0.14",
     "expo-status-bar": "~1.6.0",
     "lottie-react-native": "5.1.6",
     "react": "18.2.0",
@@ -23,7 +25,9 @@
     "react-native": "0.72.6",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-snap-carousel": "^3.9.1",
-    "react-native-web": "^0.19.9"
+    "react-native-web": "^0.19.9",
+    "typescript": "^5.1.3",
+    "@types/react": "~18.2.14"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
