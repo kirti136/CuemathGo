@@ -41,7 +41,7 @@ const LoginScreen = () => {
       }
 
       setErrorMessage("");
-      navigation.navigate("Dashboard");
+      navigation.navigate("Home");
     } catch (error) {
       console.error("Error retrieving user data:", error);
     }

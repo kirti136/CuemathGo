@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/Home/HomeScreen";
 import LoginScreen from "./screens/Auth/LoginScreen";
 import SignupScreen from "./screens/Auth/SignupScreen";
-import DashboardScreen from "./screens/Dashboard/DashboardScreen";
+// import DashboardScreen from "./screens/Dashboard/DashboardScreen";
 
 const Stack = createStackNavigator();
 
@@ -52,7 +52,7 @@ const App = () => {
         />
 
         {/* Dashboard Screen */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Dashboard"
           component={DashboardScreen}
           options={{
@@ -62,7 +62,7 @@ const App = () => {
             },
             headerTintColor: "white",
           }}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
