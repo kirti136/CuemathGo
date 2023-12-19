@@ -55,12 +55,12 @@ Cuemath Go! replicates the design and functionality detailed in the provided [Fi
 - Signup Screen: This is a form-based interface allowing new users to register for the application. It provides input fields for essential user information and performs real-time error validation, ensuring data accuracy. Upon successful completion, users can create their account by clicking the "Create Account" button, which leads to the Login screen, providing a smooth and intuitive registration experience.
 
 
-![App Screenshot]([https://raw.githubusercontent.com/kirti136/CuemathGo/main/assets/GitImages/02.png?token=GHSAT0AAAAAACLXS45YT4SQK6OOPTQDYYUSZMCDG4A](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/02.png?raw=true))
+![App Screenshot](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/02.png?raw=true)
 
 
 
 
-![App Screenshot]([https://raw.githubusercontent.com/kirti136/CuemathGo/main/assets/GitImages/03.png?token=GHSAT0AAAAAACLXS45ZR3M3EMDBY5A4Q6MAZMCDHIQ](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/03.png?raw=true))
+![App Screenshot](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/03.png?raw=true))
 
 
 ## Technology Stack
