@@ -39,7 +39,7 @@ const SignupScreen = () => {
     }
 
     if (!email.endsWith("@gmail.com")) {
-      setErrorMessage("Email should end with @gmail.com");
+      setErrorMessage("Invalid Email");
       setShowErrorMessage(true);
 
       setTimeout(() => {
