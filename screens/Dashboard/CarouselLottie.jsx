@@ -26,21 +26,21 @@ const CarouselLottie = () => {
 
   const renderCarouselItem = ({ item, index }) => {
     return (
-      <View style={carouselStyles.carouselItem}>
+      <View style={styles.carouselItem}>
         <LottieView
           source={item.lottieSource}
           autoPlay={item.isLooping}
           loop={item.isLooping}
-          style={carouselStyles.lottieAnimation}
+          style={styles.lottieAnimation}
         />
       </View>
     );
   };
 
   return (
-    <View style={carouselStyles.container}>
+    <View style={styles.container}>
       {/* Carousel Container */}
-      <View style={carouselStyles.carouselContainer}>
+      <View style={styles.carouselContainer}>
         {/* Animation */}
         <Carousel
           ref={carouselRef}
@@ -51,12 +51,12 @@ const CarouselLottie = () => {
           onSnapToItem={(index) => setActiveSlide(index)}
         />
         {/* Pgination Dots */}
-        <View style={carouselStyles.paginationContainer}>
+        <View style={styles.paginationContainer}>
           <Pagination
             dotsLength={data.length}
             activeDotIndex={activeSlide}
-            dotStyle={carouselStyles.dotStyle}
-            inactiveDotStyle={carouselStyles.inactiveDotStyle}
+            dotStyle={styles.dotStyle}
+            inactiveDotStyle={styles.inactiveDotStyle}
             inactiveDotOpacity={0.8}
             inactiveDotScale={0.9}
           />
@@ -64,16 +64,14 @@ const CarouselLottie = () => {
       </View>
 
       {/* Text */}
-      <View style={carouselStyles.textContainer}>
-        <Text style={carouselStyles.paginationText}>
-          {data[activeSlide].text}
-        </Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.paginationText}>{data[activeSlide].text}</Text>
       </View>
     </View>
   );
 };
 
-const carouselStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: "90%",
