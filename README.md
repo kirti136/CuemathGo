@@ -49,19 +49,20 @@ Cuemath Go! replicates the design and functionality detailed in the provided [Fi
 
 ## Screenshots
 
-![App Screenshot](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/01.png?raw=true)
-
 - **Home Screen:** This component showcases a simple interface with two interactive buttons for "Signup" and "Login," allowing users to navigate between different authentication flows within the mobile application.
  
 - **Signup Screen:** This is a form-based interface allowing new users to register for the application. It provides input fields for essential user information and performs real-time error validation, ensuring data accuracy. Upon successful completion, users can create their account by clicking the "Create Account" button, which is then stored in local storage with the key "UserData" and it leads to the Login screen, providing a smooth and intuitive registration experience.
+
+![App Screenshot](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/01.png?raw=true)
+
+- **Login Screen:** This component serves as the entry point for existing users to access the application by providing their registered Email ID and Password. It verifies user credentials against the stored user information in local storage and grants access upon successful authentication. The interface is designed with input fields for login credentials, error handling for invalid login attempts, and a "Login" button for user authentication, ensuring a straightforward and secure login experience.
+
+- **Dashboard Screen:** The DashboardScreen component displays essential user information like email and profile image alongside a logout button. It dynamically fetches user details from local storage, showcasing personalized data. Additionally, it integrates a carousel of Lottie animations via the CarouselLottie component, allowing users to navigate through distinct animated slides, each triggering unique actions like launching a web view or revealing a bottom sheet. This combination creates an engaging and visually appealing dashboard interface within the application.
 
 ![App Screenshot](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/02.png?raw=true)
 
 ![App Screenshot](https://github.com/kirti136/CuemathGo/blob/main/assets/GitImages/03.png?raw=true)
 
-- **Login Screen:** This component serves as the entry point for existing users to access the application by providing their registered Email ID and Password. It verifies user credentials against the stored user information in local storage and grants access upon successful authentication. The interface is designed with input fields for login credentials, error handling for invalid login attempts, and a "Login" button for user authentication, ensuring a straightforward and secure login experience.
-
-- **Dashboard Screen:** The DashboardScreen component displays essential user information like email and profile image alongside a logout button. It dynamically fetches user details from local storage, showcasing personalized data. Additionally, it integrates a carousel of Lottie animations via the CarouselLottie component, allowing users to navigate through distinct animated slides, each triggering unique actions like launching a web view or revealing a bottom sheet. This combination creates an engaging and visually appealing dashboard interface within the application.
 
 ## Technology Stack
 List of the technologies used in the project.
