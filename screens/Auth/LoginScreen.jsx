@@ -8,9 +8,10 @@ import {
   ScrollView,
   Image,
 } from "react-native";
-import storage from "../../utils/storage";
+import localStorage from "../../utils/localStorage";
 import { useNavigation } from "@react-navigation/native";
 
+// Images
 const cuemathImage = require("../../assets/images/cuemath.png");
 const goImage = require("../../assets/images/Go!.png");
 
@@ -19,10 +20,11 @@ const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const handleLogin = async () => {
     try {
-      const storedUser = await storage.getUser();
+      const storedUser = await localStorage.getUser();
 
       if (
         !storedUser ||
@@ -30,13 +32,15 @@ const LoginScreen = () => {
         storedUser.password !== password
       ) {
         setErrorMessage("Invalid credentials");
+        setShowErrorMessage(true);
+        setTimeout(() => {
+          setErrorMessage("");
+          setShowErrorMessage(false);
+        }, 5000);
         return;
       }
 
-      // Clear any previous error message
       setErrorMessage("");
-
-      // If credentials are valid, navigate to the dashboard screen
       navigation.navigate("Dashboard");
     } catch (error) {
       console.error("Error retrieving user data:", error);

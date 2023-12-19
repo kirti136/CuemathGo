@@ -9,25 +9,26 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+// Images
 const cuemathImage = require("../../assets/images/cuemath.png");
 const goImage = require("../../assets/images/Go!.png");
 
 const HomeScreen = () => {
-  const navigation = useNavigation();
   const [selectedButton, setSelectedButton] = useState("Signup");
+  const navigation = useNavigation();
 
-  const handleButtonPress = () => {
-    Vibration.vibrate(100);
+  const vibration = () => {
+    Vibration.vibrate(10);
   };
 
-  const handleLoginPress = () => {
-    handleButtonPress();
+  const handleLogin = () => {
+    vibration();
     setSelectedButton("Login");
     navigation.navigate("Login");
   };
 
-  const handleSignupPress = () => {
-    handleButtonPress();
+  const handleSignup = () => {
+    vibration();
     setSelectedButton("Signup");
     navigation.navigate("Signup");
   };
@@ -45,11 +46,11 @@ const HomeScreen = () => {
         {/* Space */}
         <View style={{ marginVertical: 40 }} />
 
-        {/* Buttons */}
+        {/* Buttons Container */}
         <View style={styles.buttonContainer}>
           {/* Signup Button */}
           <TouchableOpacity
-            onPress={handleSignupPress}
+            onPress={handleSignup}
             style={[
               styles.signupButton,
               selectedButton === "Signup" && styles.selectedButton,
@@ -67,7 +68,7 @@ const HomeScreen = () => {
 
           {/* Login Button */}
           <TouchableOpacity
-            onPress={handleLoginPress}
+            onPress={handleLogin}
             style={[
               styles.loginButton,
               selectedButton === "Login" && styles.selectedButton,

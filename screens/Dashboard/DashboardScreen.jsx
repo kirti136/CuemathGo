@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import storage from "../../utils/storage";
+import localStorage from "../../utils/localStorage";
 
 const DashboardScreen = () => {
   const navigation = useNavigation();
 
   const handleLogout = async () => {
-    await storage.removeUser();
-    navigation.navigate("Login");
+    await localStorage.removeUser();
+    navigation.navigate("Home");
   };
 
   return (

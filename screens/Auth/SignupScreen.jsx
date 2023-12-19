@@ -8,7 +8,7 @@ import {
   Image,
   ScrollView,
 } from "react-native";
-import storage from "../../utils/storage";
+import localStorage from "../../utils/localStorage";
 import { useNavigation } from "@react-navigation/native";
 
 const cuemathImage = require("../../assets/images/cuemath.png");
@@ -25,6 +25,7 @@ const SignupScreen = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
+  // Validate Register User and Save
   const handleSignup = async () => {
     if (!email || !password || !confirmPassword || !firstName || !age) {
       setErrorMessage("All fields are required");
@@ -88,7 +89,7 @@ const SignupScreen = () => {
       age,
     };
 
-    await storage.saveUser(user);
+    await localStorage.saveUser(user);
     console.log("User registered successfully:", user);
 
     setEmail("");
@@ -112,42 +113,42 @@ const SignupScreen = () => {
         {/* Input Form Container*/}
         <View style={styles.inputContainer}>
           <TextInput
-            style={styles.input}
             placeholder="Email ID"
             placeholderTextColor="gray"
             onChangeText={(text) => setEmail(text)}
             value={email}
+            style={styles.input}
           />
           <TextInput
-            style={styles.input}
             placeholder="Password"
             placeholderTextColor="gray"
             onChangeText={(text) => setPassword(text)}
             value={password}
             secureTextEntry={true}
+            style={styles.input}
           />
           <TextInput
-            style={styles.input}
             placeholder="Confirm Password"
             placeholderTextColor="gray"
             onChangeText={(text) => setConfirmPassword(text)}
             value={confirmPassword}
             secureTextEntry={true}
+            style={styles.input}
           />
           <TextInput
-            style={styles.input}
             placeholder="First Name"
             placeholderTextColor="gray"
             onChangeText={(text) => setFirstName(text)}
             value={firstName}
+            style={styles.input}
           />
           <TextInput
-            style={styles.input}
             placeholder="Age"
             placeholderTextColor="gray"
             onChangeText={(text) => setAge(text)}
             value={age}
             keyboardType="numeric"
+            style={styles.input}
           />
 
           {/* Error Message */}
