@@ -50,7 +50,7 @@ Cuemath Go! replicates the design and functionality detailed in the provided [Fi
 ## Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/kirti136/CuemathGo/main/assets/GitImages/01.png?token=GHSAT0AAAAAACLXS45ZG6DUV6Q6EANTAEYAZMCDGBA)
-
+- Home Screen: This component showcases a simple interface with two interactive buttons for "Signup" and "Login," allowing users to navigate between different authentication flows within the mobile application. The screen incorporates the Cuemath logo and "Go!" text, offering a clean and intuitive design to prompt user interaction for signing up or logging into the application.
 ![App Screenshot](https://raw.githubusercontent.com/kirti136/CuemathGo/main/assets/GitImages/02.png?token=GHSAT0AAAAAACLXS45YT4SQK6OOPTQDYYUSZMCDG4A)
 
 ![App Screenshot](https://raw.githubusercontent.com/kirti136/CuemathGo/main/assets/GitImages/03.png?token=GHSAT0AAAAAACLXS45ZR3M3EMDBY5A4Q6MAZMCDHIQ)
