@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import localStorage from "../../utils/localStorage";
@@ -6,9 +6,20 @@ import CarouselLottie from "./CarouselLottie";
 
 const DashboardScreen = () => {
   const navigation = useNavigation();
-  const user = localStorage.getUser();
-  const userEmail = "user@example.com";
-  // const userEmail = user ? user.email : "user@example.com";
+  const [userEmail, setUserEmail] = useState("user@example.com");
+
+  useEffect(() => {
+    const getEmail = async () => {
+      try {
+        const user = await localStorage.getUser();
+        setUserEmail(user ? user.email : "user@example.com");
+      } catch (error) {
+        console.error("Error fetching user email:", error);
+      }
+    };
+
+    getEmail();
+  }, []);
 
   const handleLogout = async () => {
     await localStorage.removeUser();
