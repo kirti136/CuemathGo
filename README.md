@@ -4,13 +4,11 @@
 Welcome to Cuemath Go!, a mock implementation of the native app built in React Native. This project is an assignment submission showcasing the integration of various React Native features and components as outlined in the assignment.
 
 ## Overview 
-Cuemath Go! replicates the design and functionality detailed in the provided [Figma](https://cuemath.notion.site/App-Assignment-Cuemath-Go-4f18089084d040d28f4f1b2ef946db55) file. It emphasizes the utilization of React Native fundamentals, Lottie Animations, Navigation, Carousel, Bottom Sheet, and Async Storage for data storage. 
+Cuemath Go! replicates the design and functionality detailed in the provided [Figma](https://cuemath.notion.site/App-Assignment-Cuemath-Go-4f18089084d040d28f4f1b2ef946db55) file. It emphasizes the utilization of React Native fundamentals, Lottie Animations, Navigation, Carousel, Bottom Sheet, and Async Storage for data storage. [Short Demo](https://drive.google.com/file/d/1-5-IImx78iFFFKwpgq4SLw0RtpksV7H6/view?usp=drive_link)
 
 ## Video Walkthrough of the project
-[Attach a brief video walkthrough of CUEMATH Go! application]()
+[Attach a brief video walkthrough of CUEMATH Go! application](https://drive.google.com/file/d/1sZ7MClYNssbrFRp49XU-4LkfhleM2buj/view?usp=drive_link)
 
-## Video Walkthrough of the codebase
-[Attach a brief video walkthrough of CUEMATH Go! application]()
 
 ## Features
 
