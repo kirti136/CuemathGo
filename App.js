@@ -25,12 +25,12 @@ const App = () => {
           }}
         />
 
-        {/* Login Screen */}
+        {/* Signup Screen */}
         <Stack.Screen
-          name="Login"
-          component={LoginScreen}
+          name="Signup"
+          component={SignupScreen}
           options={{
-            title: "Login",
+            title: "Signup",
             headerStyle: {
               backgroundColor: "black",
             },
@@ -38,12 +38,12 @@ const App = () => {
           }}
         />
 
-        {/* Signup Screen */}
+        {/* Login Screen */}
         <Stack.Screen
-          name="Signup"
-          component={SignupScreen}
+          name="Login"
+          component={LoginScreen}
           options={{
-            title: "Signup",
+            title: "Login",
             headerStyle: {
               backgroundColor: "black",
             },
