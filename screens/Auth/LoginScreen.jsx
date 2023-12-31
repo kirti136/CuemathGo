@@ -76,7 +76,7 @@ const LoginScreen = () => {
           />
 
           {/* Error Message */}
-          {errorMessage ? (
+          {showErrorMessage && errorMessage ? (
             <Text style={styles.errorText}>{errorMessage}</Text>
           ) : null}
         </View>
