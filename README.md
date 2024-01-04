@@ -7,8 +7,6 @@ Cuemath Go! replicates the design and functionality detailed in the provided [Fi
 
 ## Video Walkthrough of the project
 [Attach a brief video walkthrough of CUEMATH Go! application](https://drive.google.com/file/d/1sZ7MClYNssbrFRp49XU-4LkfhleM2buj/view?usp=drive_link)
- ## APK file
-- [APK](https://drive.google.com/file/d/1pHgFGkTNmBT5BhKIL-xOL66shTf9dLgP/view?usp=drive_link)
 
 ## Features
 
